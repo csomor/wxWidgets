@@ -601,10 +601,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.static;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -612,10 +615,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.static;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -646,6 +652,7 @@
 			baseConfigurationReference = 407A752313B0E1EB006BC2D5 /* wxdebug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info_cocoa.plist;
+				SDKROOT = macosx;
 				WXROOT = "$(PROJECT_DIR)/../..";
 			};
 			name = Debug;
@@ -655,6 +662,7 @@
 			baseConfigurationReference = 407A752413B0E1EB006BC2D5 /* wxrelease.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Info_cocoa.plist;
+				SDKROOT = macosx;
 				WXROOT = "$(PROJECT_DIR)/../..";
 			};
 			name = Release;
