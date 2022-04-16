@@ -587,10 +587,10 @@ void wxGLAPI::glEnd()
         RestoreState( GL_COLOR_ARRAY, formerColors );
 
     if ( s_normalsUsed != formerNormals )
-        RestoreState( GL_NORMAL_ARRAY, formerColors );
+        RestoreState( GL_NORMAL_ARRAY, formerNormals );
 
     if ( s_texCoordsUsed != formerTexCoords )
-        RestoreState( GL_TEXTURE_COORD_ARRAY, formerColors );
+        RestoreState( GL_TEXTURE_COORD_ARRAY, formerTexCoords );
 
     if( !formerVertex )
         glDisableClientState(GL_VERTEX_ARRAY);
