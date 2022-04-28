@@ -384,6 +384,9 @@ void wxFontRefData::Alloc()
                 }
             }
 
+            m_info = wxNativeFontInfo();
+            m_info.InitFromFont(m_ctFont);
+
             entryWithSize.font = m_ctFont;
             entryWithSize.cgFont = m_cgFont;
             entryWithSize.fontAttributes = m_ctFontAttributes;
@@ -855,6 +858,12 @@ void wxNativeFontInfo::InitFromFont(CTFontRef font)
 
     wxCFRef<CTFontDescriptorRef> desc(CTFontCopyFontDescriptor(font));
     InitFromFontDescriptor( desc );
+
+    // in case the font itself does not exist as italic it might have
+    // been created with the emulation via a font transform
+    if ( !CGAffineTransformIsIdentity(CTFontGetMatrix(font)) ) {
+        m_style = wxFONTSTYLE_ITALIC;
+    }
 }
 
 void wxNativeFontInfo::InitFromFontDescriptor(CTFontDescriptorRef desc)
@@ -1123,16 +1132,10 @@ bool wxNativeFontInfo::FromString(const wxString& s)
     }
     else if ( version == 2 || version == 3 )
     {
-        wxFontFamily family = wxFONTFAMILY_DEFAULT;
         wxFontStyle style = wxFONTSTYLE_NORMAL;
 
         if ( version == 3 )
         {
-            token = tokenizer.GetNextToken();
-            if ( !token.ToLong(&l) )
-                return false;
-            family = (wxFontFamily) l;
-
             token = tokenizer.GetNextToken();
             if ( !token.ToLong(&l) )
                 return false;
@@ -1169,7 +1172,6 @@ bool wxNativeFontInfo::FromString(const wxString& s)
             m_underlined = underlined;
             m_strikethrough = strikethrough;
             m_encoding = encoding;
-            m_family = family;
             m_style = style;
             return true;
         }
@@ -1184,6 +1186,9 @@ wxString wxNativeFontInfo::ToString() const
 
     // version 2 is a streamed property list of the font descriptor as recommended by Apple
     // prefixed by the attributes that are non-native to the native font ref like underline, strikethrough etc.
+    // version 3 adds to v2 the style attribute because this cannot always be expressed
+    // in the native font descriptor. In situations where there is no native italic font
+    //  the slant-ness has to be emulated in the font's transform
     wxCFDictionaryRef attributes(CTFontDescriptorCopyAttributes(GetCTFontDescriptor()));
 
     if (attributes != NULL)
@@ -1198,9 +1203,8 @@ wxString wxNativeFontInfo::ToString() const
             xml.Replace("\t",wxEmptyString,true);
             xml = xml.Mid(xml.Find("<plist"));
 
-            s.Printf("%d;%d;%d;%d;%d;%d;%s",
+            s.Printf("%d;%d;%d;%d;%d;%s",
                  3, // version
-                 GetFamily(),
                  (int)GetStyle(),
                  GetUnderlined(),
                  GetStrikethrough(),
