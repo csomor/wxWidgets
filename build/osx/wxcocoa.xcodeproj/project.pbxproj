@@ -11466,6 +11466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.static;
 				PRODUCT_NAME = "$(PRODUCT_NAME)_static";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -11751,6 +11752,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.static;
 				PRODUCT_NAME = "$(PRODUCT_NAME)_static";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
