@@ -601,8 +601,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.static;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -611,8 +616,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.static;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -621,8 +631,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L7TJM735;
+				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.dynamic;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(WXROOT)/include $(WXROOT)/build/osx/setup/$(WXTOOLKIT)/include";
 			};
 			name = Debug;
@@ -631,8 +645,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9L7TJM735;
+				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimal.dynamic;
 				PRODUCT_NAME = minimal_cocoa;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(WXROOT)/include $(WXROOT)/build/osx/setup/$(WXTOOLKIT)/include";
 			};
 			name = Release;
