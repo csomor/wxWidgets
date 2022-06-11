@@ -221,13 +221,13 @@
 
 /* Begin PBXFileReference section */
 		405B1A8410EF202100676938 /* wxcocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wxcocoa.xcodeproj; path = ../../build/osx/wxcocoa.xcodeproj; sourceTree = SOURCE_ROOT; };
-		405B1ACB10EF253300676938 /* minimal_cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minimal_cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		405B1ACB10EF253300676938 /* minimal_cocoa_static.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minimal_cocoa_static.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40735927137088070077DE1B /* Info_cocoa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_cocoa.plist; sourceTree = "<group>"; };
 		407A752213B0E1EB006BC2D5 /* wxcocoa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = wxcocoa.xcconfig; path = ../../build/osx/wxcocoa.xcconfig; sourceTree = SOURCE_ROOT; };
 		407A752313B0E1EB006BC2D5 /* wxdebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = wxdebug.xcconfig; path = ../../build/osx/wxdebug.xcconfig; sourceTree = SOURCE_ROOT; };
 		407A752413B0E1EB006BC2D5 /* wxrelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = wxrelease.xcconfig; path = ../../build/osx/wxrelease.xcconfig; sourceTree = SOURCE_ROOT; };
 		407A75B313B0FE67006BC2D5 /* minimal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = minimal.cpp; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* minimal_cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minimal_cocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* minimal_cocoa_dynamic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minimal_cocoa_dynamic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,8 +253,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* minimal_cocoa.app */,
-				405B1ACB10EF253300676938 /* minimal_cocoa.app */,
+				8D1107320486CEB800E47090 /* minimal_cocoa_dynamic.app */,
+				405B1ACB10EF253300676938 /* minimal_cocoa_static.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 			name = "app-static";
 			productInstallPath = "$(HOME)/Applications";
 			productName = minimal_cocoa;
-			productReference = 405B1ACB10EF253300676938 /* minimal_cocoa.app */;
+			productReference = 405B1ACB10EF253300676938 /* minimal_cocoa_static.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8D1107260486CEB800E47090 /* app-dynamic */ = {
@@ -350,7 +350,7 @@
 			name = "app-dynamic";
 			productInstallPath = "$(HOME)/Applications";
 			productName = minimal_cocoa;
-			productReference = 8D1107320486CEB800E47090 /* minimal_cocoa.app */;
+			productReference = 8D1107320486CEB800E47090 /* minimal_cocoa_dynamic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -603,10 +603,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HV767W689N;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimalstatic;
-				PRODUCT_NAME = minimal_cocoa;
+				PRODUCT_NAME = minimal_cocoa_static;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
@@ -618,10 +618,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HV767W689N;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimalstatic;
-				PRODUCT_NAME = minimal_cocoa;
+				PRODUCT_NAME = minimal_cocoa_static;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
@@ -633,9 +633,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HV767W689N;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimaldynamic;
-				PRODUCT_NAME = minimal_cocoa;
+				PRODUCT_NAME = minimal_cocoa_dynamic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(WXROOT)/include $(WXROOT)/build/osx/setup/$(WXTOOLKIT)/include";
 			};
@@ -647,9 +647,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HV767W689N;
+				DEVELOPMENT_TEAM = V9L7TJM735;
 				PRODUCT_BUNDLE_IDENTIFIER = org.wxwidgets.minimaldynamic;
-				PRODUCT_NAME = minimal_cocoa;
+				PRODUCT_NAME = minimal_cocoa_dynamic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(WXROOT)/include $(WXROOT)/build/osx/setup/$(WXTOOLKIT)/include";
 			};

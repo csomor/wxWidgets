@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D1107260486CEB800E47090"
-               BuildableName = "minimal_cocoa.app"
-               BlueprintName = "app-dynamic"
+               BlueprintIdentifier = "405B1ABF10EF253300676938"
+               BuildableName = "minimal_cocoa_static.app"
+               BlueprintName = "app-static"
                ReferencedContainer = "container:minimal_cocoa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,9 +30,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "minimal_cocoa.app"
-            BlueprintName = "app-dynamic"
+            BlueprintIdentifier = "405B1ABF10EF253300676938"
+            BuildableName = "minimal_cocoa_static.app"
+            BlueprintName = "app-static"
             ReferencedContainer = "container:minimal_cocoa.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -53,9 +53,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "minimal_cocoa.app"
-            BlueprintName = "app-dynamic"
+            BlueprintIdentifier = "405B1ABF10EF253300676938"
+            BuildableName = "minimal_cocoa_static.app"
+            BlueprintName = "app-static"
             ReferencedContainer = "container:minimal_cocoa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,9 +70,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "minimal_cocoa.app"
-            BlueprintName = "app-dynamic"
+            BlueprintIdentifier = "405B1ABF10EF253300676938"
+            BuildableName = "minimal_cocoa_static.app"
+            BlueprintName = "app-static"
             ReferencedContainer = "container:minimal_cocoa.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
